@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: au-campus-court-api
+    runtime: docker
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PEER_API_KEY
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false

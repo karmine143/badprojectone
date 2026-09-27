@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      DATABASE_URL: "file:./dev.db"
+      JWT_SECRET: "replace-in-production"
+      PEER_API_KEY: "replace-in-production"
